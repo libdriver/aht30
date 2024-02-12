@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver AHT30
- * @brief     libdriver aht30 is a full function driver of aht30 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver AHT30 is a full function driver of AHT30 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
