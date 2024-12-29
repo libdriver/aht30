@@ -113,56 +113,56 @@ typedef struct aht30_info_s
 
 /**
  * @brief     initialize aht30_handle_t structure
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] STRUCTURE is aht30_handle_t
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] STRUCTURE aht30_handle_t
  * @note      none
  */
 #define DRIVER_AHT30_LINK_INIT(HANDLE, STRUCTURE)      memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_IIC_INIT(HANDLE, FUC)        (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_IIC_DEINIT(HANDLE, FUC)      (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read_cmd function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to an iic_read_cmd function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to an iic_read_cmd function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_IIC_READ_CMD(HANDLE, FUC)    (HANDLE)->iic_read_cmd = FUC
 
 /**
  * @brief     link iic_write_cmd function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to an iic_write_cmd function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to an iic_write_cmd function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_IIC_WRITE_CMD(HANDLE, FUC)   (HANDLE)->iic_write_cmd = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_DELAY_MS(HANDLE, FUC)        (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an aht30 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an aht30 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_AHT30_LINK_DEBUG_PRINT(HANDLE, FUC)     (HANDLE)->debug_print = FUC
@@ -180,7 +180,7 @@ typedef struct aht30_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an aht30 info structure
+ * @param[out] *info pointer to an aht30 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -190,7 +190,7 @@ uint8_t aht30_info(aht30_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an aht30 handle structure
+ * @param[in] *handle pointer to an aht30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic failed
@@ -204,7 +204,7 @@ uint8_t aht30_init(aht30_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an aht30 handle structure
+ * @param[in] *handle pointer to an aht30 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 deinit failed
@@ -216,11 +216,11 @@ uint8_t aht30_deinit(aht30_handle_t *handle);
 
 /**
  * @brief      read the temperature and humidity data
- * @param[in]  *handle points to an aht30 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an aht30 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature humidity failed
@@ -235,9 +235,9 @@ uint8_t aht30_read_temperature_humidity(aht30_handle_t *handle, uint32_t *temper
 
 /**
  * @brief      read the temperature
- * @param[in]  *handle points to an aht30 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
+ * @param[in]  *handle pointer to an aht30 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature failed
@@ -251,9 +251,9 @@ uint8_t aht30_read_temperature(aht30_handle_t *handle, uint32_t *temperature_raw
 
 /**
  * @brief      read the humidity data
- * @param[in]  *handle points to an aht30 handle structure
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an aht30 handle structure
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read humidity failed
@@ -267,8 +267,8 @@ uint8_t aht30_read_humidity(aht30_handle_t *handle, uint32_t *humidity_raw, uint
 
 /**
  * @brief      get status
- * @param[in]  *handle points to an aht30 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an aht30 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -291,9 +291,9 @@ uint8_t aht30_get_status(aht30_handle_t *handle, uint8_t *status);
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to an aht30 handle structure
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to an aht30 handle structure
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -305,9 +305,9 @@ uint8_t aht30_set_reg(aht30_handle_t *handle, uint8_t *buf, uint16_t len);
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to an aht30 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to an aht30 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
