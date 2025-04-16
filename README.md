@@ -10,7 +10,7 @@
 
 AHT30 is a brand new temperature and humidity sensor with the advantages of low power consumption and high accuracy. It is embedded in a dual row flat lead-free SMD package suitable for reflow soldering, with a sturdy shell and small size, which can be easily integrated into difficult designs. AHT30 is equipped with a newly optimized ASIC specific chip, an improved MEMS semiconductor capacitive humidity sensing element, and a standard on-chip temperature sensing element, which has significantly improved its performance and can maintain stable performance even in harsh environments. The AHT30 temperature and humidity sensor can help reduce power consumption in application devices, making it highly cost-effective. It is very suitable for mass production by enterprises that have strict cost control but also focus on quality.
 
-LibDriver AHT30 is the full function driver of AHT30 launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
+LibDriver AHT30 is a full-featured driver of AHT30 launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
